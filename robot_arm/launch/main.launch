@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="robot" default="machines"/>
+    <arg name="debug" default="false"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="pause" default="true"/>  <!-- Start Gazebo with a blank world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find robot_arm)/worlds/low_gravity.world"/>
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg pause)"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="headless" value="$(arg headless)"/>
+        <env name="GAZEBO_MODEL_PATH" value="$(find robot_arm)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+    </include>
+
+
+    <!--<include file="$(find legged_robots_sims)/launch/put_robot_in_world.launch"/>-->
+
+    
+    <include file="$(find robot_arm)/launch/spawn_robot_arm.launch"/>
+    <include file="$(find robot_arm)/launch/robot_arm_control.launch"/>
+    
+
+
+</launch>

@@ -1,0 +1,31 @@
+# .yaml config file
+#
+# The PID gains and controller settings must be saved in a yaml file that gets loaded
+# to the param server via the roslaunch file (robot_arm_control.launch).
+
+robot_arm:
+  # Publish all joint states -----------------------------------
+  # Creates the /joint_states topic necessary in ROS
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000
+
+  # Effort Controllers ---------------------------------------
+  joint_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint_1
+    pid: {p: 1000.0, i: 0.0, d: 0.7}
+    #pid: {p: 50.0, i: 0.1, d: 0.0}
+  joint_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint_2
+    pid: {p: 1000.0, i: 0.0, d: 0.7}
+    #pid: {p: 50.0, i: 0.1, d: 0.0}
+  joint_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint_3
+    pid: {p: 5000.0, i: 0.0, d: 0.7}
+  joint_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint_4
+    pid: {p: 5000.0, i: 0.0, d: 0.7}
