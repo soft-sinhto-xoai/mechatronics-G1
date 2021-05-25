@@ -8,17 +8,17 @@
     name="Link_1">
     <inertial>
       <origin
-        xyz="1.3259E-05 -0.00020787 0.022632"
+        xyz="4.5282E-05 4.8688E-06 0.023636"
         rpy="0 0 0" />
       <mass
-        value="0.14143" />
+        value="0.14588" />
       <inertia
-        ixx="9.5094E-05"
-        ixy="-7.6497E-08"
-        ixz="-5.2057E-08"
-        iyy="9.6288E-05"
-        iyz="8.1613E-07"
-        izz="9.9513E-05" />
+        ixx="9.6389E-05"
+        ixy="9.0084E-08"
+        ixz="-8.254E-07"
+        iyy="9.5561E-05"
+        iyz="-8.8747E-08"
+        izz="9.9975E-05" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="Link_2">
     <inertial>
       <origin
-        xyz="-1.7958E-07 -0.0001946 0.0064567"
+        xyz="1.9973E-06 -0.00019544 0.016457"
         rpy="0 0 0" />
       <mass
         value="0.047031" />
       <inertia
-        ixx="1.1405E-05"
-        ixy="-7.3013E-09"
-        ixz="-2.1692E-11"
-        iyy="1.1766E-05"
-        iyz="5.8721E-08"
-        izz="1.2461E-05" />
+        ixx="1.1303E-05"
+        ixy="1.4175E-08"
+        ixz="2.7298E-10"
+        iyy="1.1863E-05"
+        iyz="5.8768E-08"
+        izz="1.2456E-05" />
     </inertial>
     <visual>
       <origin
@@ -88,14 +88,14 @@
     name="Joint_1"
     type="revolute">
     <origin
-      xyz="0 0 0.07"
+      xyz="0 0 0.06"
       rpy="0 0 0" />
     <parent
       link="Link_1" />
     <child
       link="Link_2" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 -1" />
     <limit
       lower="-1.6"
       upper="1.6"
@@ -106,17 +106,17 @@
     name="Link_3">
     <inertial>
       <origin
-        xyz="-7.2675E-07 -0.0093828 0.035092"
+        xyz="-7.26752070051573E-07 -0.0093828236828277 0.035091806750311"
         rpy="0 0 0" />
       <mass
-        value="0.01296" />
+        value="0.0129599236993002" />
       <inertia
-        ixx="5.3096E-06"
-        ixy="1.7479E-11"
-        ixz="3.3284E-10"
-        iyy="5.6442E-06"
-        iyz="-6.5628E-08"
-        izz="5.7751E-07" />
+        ixx="5.30958057343358E-06"
+        ixy="1.74787720994169E-11"
+        ixz="3.32836221131858E-10"
+        iyy="5.64415590766548E-06"
+        iyz="-6.5627531906886E-08"
+        izz="5.77508982647376E-07" />
     </inertial>
     <visual>
       <origin
@@ -129,7 +129,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -146,14 +146,14 @@
     name="Joint_2"
     type="revolute">
     <origin
-      xyz="0 0 0.042"
+      xyz="0 0 0.052"
       rpy="0 0 0" />
     <parent
       link="Link_2" />
     <child
       link="Link_3" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
     <limit
       lower="-1.6"
       upper="1.6"
@@ -164,17 +164,17 @@
     name="Link_4">
     <inertial>
       <origin
-        xyz="0.0023712 2.6272E-05 0.054037"
+        xyz="0.0022806 6.1295E-06 0.054205"
         rpy="0 0 0" />
       <mass
-        value="0.022295" />
+        value="0.022474" />
       <inertia
-        ixx="1.3533E-05"
+        ixx="1.3536E-05"
         ixy="-7.4689E-11"
         ixz="1.1336E-07"
-        iyy="1.6104E-05"
+        iyy="1.6105E-05"
         iyz="3.6796E-08"
-        izz="2.947E-06" />
+        izz="2.9505E-06" />
     </inertial>
     <visual>
       <origin
@@ -219,20 +219,20 @@
       velocity="1.0" />
   </joint>
   <link
-    name="Gripper">
+    name="Gripper_1">
     <inertial>
       <origin
-        xyz="-0.013598 -0.0068444 0.020417"
+        xyz="0.00586952450495107 -0.00677717603214567 0.0220694637901648"
         rpy="0 0 0" />
       <mass
-        value="0.015151" />
+        value="0.00733041741689851" />
       <inertia
-        ixx="5.9735E-06"
-        ixy="3.8799E-09"
-        ixz="7.5027E-08"
-        iyy="6.6512E-06"
-        iyz="-3.0064E-07"
-        izz="8.7313E-07" />
+        ixx="2.94598911061967E-06"
+        ixy="3.57638828167118E-08"
+        ixz="7.46332577953686E-08"
+        iyy="3.26364947357201E-06"
+        iyz="-1.6966482237963E-07"
+        izz="4.22647329437319E-07" />
     </inertial>
     <visual>
       <origin
@@ -240,12 +240,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robot_arm/meshes/Gripper.STL" />
+          filename="package://robot_arm/meshes/Gripper_1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.92941 1" />
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
       </material>
     </visual>
     <collision>
@@ -254,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://robot_arm/meshes/Gripper.STL" />
+          filename="package://robot_arm/meshes/Gripper_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -267,7 +267,65 @@
     <parent
       link="Link_4" />
     <child
-      link="Gripper" />
+      link="Gripper_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.6"
+      upper="1.6"
+      effort="200"
+      velocity="1.0" />
+  </joint>
+  <link
+    name="Gripper_2">
+    <inertial>
+      <origin
+        xyz="-0.00534703198630246 -0.00690732989471416 0.0188678202931807"
+        rpy="0 0 0" />
+      <mass
+        value="0.00782008836001168" />
+      <inertia
+        ixx="3.02747330802087E-06"
+        ixy="-3.1884020145062E-08"
+        ixz="3.93346556365972E-10"
+        iyy="3.3875046197577E-06"
+        iyz="-1.30979650389178E-07"
+        izz="4.50478832229237E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/Gripper_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_arm/meshes/Gripper_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.009 0 0.075"
+      rpy="0 0 0" />
+    <parent
+      link="Link_4" />
+    <child
+      link="Gripper_2" />
     <axis
       xyz="0 1 0" />
     <limit
